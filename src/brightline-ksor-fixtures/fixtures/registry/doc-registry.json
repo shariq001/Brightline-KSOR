@@ -1,0 +1,22 @@
+{
+  "registry_version": "1.0",
+  "generated_at": "2026-09-14T00:00:00Z",
+  "documents": [
+    {"doc_id": "BL-PUB-001", "path": "public-sor/product-overview.md", "title": "Brightline Product Overview", "version": "3.1", "status": "current", "audience": "public", "sensitivity": "standard", "effective_date": "2026-04-01", "checksum": "sha256:9a1f...c2e0"},
+    {"doc_id": "BL-PUB-002", "path": "public-sor/pricing-policy.md", "title": "Brightline Pricing Policy", "version": "2.4", "status": "current", "audience": "public", "sensitivity": "standard", "effective_date": "2026-07-15", "checksum": "sha256:41bd...7f31"},
+    {"doc_id": "BL-PUB-003", "path": "public-sor/support-sla.md", "title": "Brightline Support SLA", "version": "1.6", "status": "current", "audience": "public", "sensitivity": "standard", "effective_date": "2026-07-15", "checksum": "sha256:e02c...aa19"},
+    {"doc_id": "BL-PUB-004", "path": "public-sor/data-privacy-policy.md", "title": "Brightline Data Privacy Policy", "version": "4.0", "status": "current", "audience": "public", "sensitivity": "standard", "effective_date": "2026-05-01", "checksum": "sha256:70d4...5c8b"},
+    {"doc_id": "BL-PUB-005", "path": "public-sor/security-overview.md", "title": "Brightline Security Overview", "version": "1.2", "status": "current", "audience": "public", "sensitivity": "standard", "effective_date": "2026-06-20", "checksum": "sha256:b813...0e4d"},
+    {"doc_id": "BL-PUB-006", "path": "public-sor/api-overview.md", "title": "Brightline API Overview", "version": "2.0", "status": "current", "audience": "public", "sensitivity": "standard", "effective_date": "2026-08-01", "checksum": "sha256:2f6a...991c"},
+
+    {"doc_id": "BL-INT-001", "path": "internal-sor/refund-approval-policy.md", "title": "Refund Approval Policy", "version": "2.0", "status": "current", "audience": "internal", "sensitivity": "standard", "effective_date": "2026-06-01", "checksum": "sha256:c4a2...118f"},
+    {"doc_id": "BL-INT-001-OLD", "path": "internal-sor/old-refund-policy.md", "title": "Refund Approval Policy (superseded)", "version": "1.0", "status": "superseded", "superseded_by": "BL-INT-001", "audience": "internal", "sensitivity": "standard", "effective_date": "2024-01-15", "checksum": "sha256:009f...6b2a"},
+    {"doc_id": "BL-INT-002", "path": "internal-sor/incident-response-runbook.md", "title": "Incident Response Runbook", "version": "1.3", "status": "current", "audience": "internal", "sensitivity": "standard", "effective_date": "2026-03-10", "checksum": "sha256:aa71...4d0e"},
+    {"doc_id": "BL-INT-002-ADD", "path": "internal-sor/security-incident-escalation-addendum.md", "title": "Security Incident Escalation Addendum", "version": "1.0", "status": "current", "audience": "internal", "sensitivity": "restricted", "effective_date": "2026-08-20", "checksum": "sha256:5c90...ee12", "note": "UNRECONCILED conflict with BL-INT-002 on SEV1 escalation window — see PLANTED.md"},
+    {"doc_id": "BL-INT-003", "path": "internal-sor/employee-discount-authority.md", "title": "Employee Discount Authority", "version": "1.5", "status": "current", "audience": "internal", "sensitivity": "standard", "effective_date": "2026-04-15", "checksum": "sha256:71cb...3a90"},
+    {"doc_id": "BL-INT-004", "path": "internal-sor/internal-roadmap-notes.md", "title": "Internal Roadmap Notes — Next Quarter", "version": "0.9", "status": "current", "audience": "internal", "sensitivity": "restricted", "effective_date": "2026-09-01", "checksum": "sha256:d10e...c774"},
+    {"doc_id": "BL-INT-005", "path": "internal-sor/billing-dispute-process.md", "title": "Billing Dispute Process", "version": "1.1", "status": "current", "audience": "internal", "sensitivity": "standard", "effective_date": "2026-05-20", "checksum": "sha256:6e2b...019a"},
+    {"doc_id": "BL-INT-006", "path": "internal-sor/employee-onboarding-checklist.md", "title": "Employee Onboarding Checklist", "version": "1.0", "status": "current", "audience": "internal", "sensitivity": "standard", "effective_date": "2026-02-01", "checksum": "sha256:8f1a...bb44"},
+    {"doc_id": "BL-INT-007", "path": "internal-sor/data-retention-internal.md", "title": "Data Retention — Internal Operations Detail", "version": "1.0", "status": "current", "audience": "internal", "sensitivity": "standard", "effective_date": "2026-05-10", "checksum": "sha256:33d5...ff02", "note": "UNRECONCILED conflict with BL-PUB-004 on backup retention window — see PLANTED.md"}
+  ]
+}

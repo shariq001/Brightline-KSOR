@@ -1,0 +1,61 @@
+# Access control model for the Brightline KSoR.
+# This is the enforcement layer a retrieval system should check at QUERY TIME —
+# front-matter `audience:`/`sensitivity:` fields are metadata, not enforcement.
+# A doc's front matter tells you what it IS; this file tells you who may SEE it.
+
+version: 1.0
+
+roles:
+  public:
+    description: Unauthenticated users, prospects, customers via help center
+    can_access:
+      audience: [public]
+      sensitivity: [standard]
+
+  employee_general:
+    description: Any Brightline employee, default role on SSO login
+    can_access:
+      audience: [public, internal]
+      sensitivity: [standard]
+      # NOTE: "restricted" sensitivity is NOT included here by default —
+      # restricted docs require an explicit grant below.
+
+  support_agent:
+    inherits: employee_general
+    can_access:
+      doc_ids_extra: []   # refund policy, SLA, discount policy already covered by "standard" internal
+
+  support_manager:
+    inherits: support_agent
+    can_access:
+      doc_ids_extra: []
+
+  sales_rep:
+    inherits: employee_general
+    can_access:
+      doc_ids_extra: []
+
+  engineering:
+    inherits: employee_general
+    can_access:
+      doc_ids_extra: [BL-INT-002-ADD]   # security incident escalation addendum (restricted)
+
+  product_and_exec:
+    inherits: employee_general
+    can_access:
+      sensitivity: [standard, restricted]   # full access, incl. roadmap notes
+
+# Explicit deny list — belt and suspenders even if a role grant would otherwise match.
+# Nothing in working-context/ or PLANTED.md is ever a retrievable "document";
+# they are excluded from the registry entirely (see doc-registry.json), not just access-controlled.
+never_retrievable:
+  - PLANTED.md
+  - "working-context/*"
+
+resolution_rules:
+  - "If a requested doc's status is 'superseded', do not return it as an answer to a factual
+     question; return the doc it was superseded_by instead, optionally noting the prior
+     version existed if the user asks about history."
+  - "If two 'current' docs disagree (see doc-registry.json entries flagged with 'note'),
+     do not silently pick one — surface the conflict to a human owner (doc 'owner' field)
+     rather than guessing which is correct."

@@ -1,0 +1,17 @@
+{"ts": "2024-01-15T09:00:00Z", "event": "doc_created", "doc_id": "BL-INT-001-OLD", "version": "1.0", "actor": "dana.oyelaran@brightline-internal.example"}
+{"ts": "2026-02-01T09:00:00Z", "event": "doc_created", "doc_id": "BL-INT-006", "version": "1.0", "actor": "people-ops-bot"}
+{"ts": "2026-03-10T14:00:00Z", "event": "doc_created", "doc_id": "BL-INT-002", "version": "1.3", "actor": "ravi.chandran@brightline-internal.example"}
+{"ts": "2026-04-01T10:00:00Z", "event": "doc_created", "doc_id": "BL-PUB-001", "version": "3.1", "actor": "marketing-cms-sync"}
+{"ts": "2026-04-15T11:00:00Z", "event": "doc_created", "doc_id": "BL-INT-003", "version": "1.5", "actor": "james.okonkwo@brightline-internal.example"}
+{"ts": "2026-05-01T08:30:00Z", "event": "doc_created", "doc_id": "BL-PUB-004", "version": "4.0", "actor": "legal-cms-sync"}
+{"ts": "2026-05-10T13:00:00Z", "event": "doc_created", "doc_id": "BL-INT-007", "version": "1.0", "actor": "ravi.chandran@brightline-internal.example"}
+{"ts": "2026-05-20T09:15:00Z", "event": "doc_created", "doc_id": "BL-INT-005", "version": "1.1", "actor": "billing-ops-sync"}
+{"ts": "2026-06-01T09:00:00Z", "event": "doc_superseded", "doc_id": "BL-INT-001-OLD", "superseded_by": "BL-INT-001", "actor": "dana.oyelaran@brightline-internal.example"}
+{"ts": "2026-06-01T09:00:00Z", "event": "doc_created", "doc_id": "BL-INT-001", "version": "2.0", "actor": "dana.oyelaran@brightline-internal.example"}
+{"ts": "2026-06-20T10:00:00Z", "event": "doc_created", "doc_id": "BL-PUB-005", "version": "1.2", "actor": "security-cms-sync"}
+{"ts": "2026-07-15T07:00:00Z", "event": "doc_version_bumped", "doc_id": "BL-PUB-002", "from_version": "2.3", "to_version": "2.4", "actor": "marketing-cms-sync"}
+{"ts": "2026-07-15T07:00:00Z", "event": "doc_version_bumped", "doc_id": "BL-PUB-003", "from_version": "1.5", "to_version": "1.6", "actor": "support-ops-sync"}
+{"ts": "2026-08-01T12:00:00Z", "event": "doc_created", "doc_id": "BL-PUB-006", "version": "2.0", "actor": "devportal-sync"}
+{"ts": "2026-08-20T15:45:00Z", "event": "doc_created", "doc_id": "BL-INT-002-ADD", "version": "1.0", "actor": "priya.nair@brightline-internal.example", "note": "Not yet reconciled with BL-INT-002 SEV1 escalation window"}
+{"ts": "2026-09-01T09:00:00Z", "event": "doc_created", "doc_id": "BL-INT-004", "version": "0.9", "actor": "product-notion-sync"}
+{"ts": "2026-09-14T06:00:00Z", "event": "access_policy_reviewed", "actor": "security-team", "result": "no changes"}

@@ -1,0 +1,8 @@
+version: "0.1"
+audiences:
+  internal:
+    description: Brightline Employees
+approval_authorities:
+  - actors: [human:mshariq]
+takedown_authorities:
+  actors: [human:mshariq]

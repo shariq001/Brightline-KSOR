@@ -1,0 +1,78 @@
+# Simulated ingestion provenance: where each doc "lives" upstream and how it
+# gets into the KSoR. In a real deployment these would be actual connector
+# configs (Confluence API, Notion API, Zendesk Guide API, Google Drive API,
+# Slack Events API); here they're illustrative so a portfolio project has
+# something to point a real connector implementation at.
+
+sources:
+  - source_id: confluence-marketing
+    system: confluence
+    space: MKT
+    sync_frequency: hourly
+    docs:
+      - {doc_id: BL-PUB-001, upstream_page_id: "MKT-2201", last_synced_at: "2026-09-14T06:00:00Z"}
+      - {doc_id: BL-PUB-002, upstream_page_id: "MKT-2205", last_synced_at: "2026-09-14T06:00:00Z"}
+
+  - source_id: zendesk-guide
+    system: zendesk_guide
+    brand: brightline-support
+    sync_frequency: hourly
+    docs:
+      - {doc_id: BL-PUB-003, upstream_article_id: "9001234", last_synced_at: "2026-09-14T06:00:00Z"}
+      - {doc_id: BL-PUB-005, upstream_article_id: "9001240", last_synced_at: "2026-09-14T06:00:00Z"}
+
+  - source_id: gdrive-legal
+    system: google_drive
+    folder: "Legal & Compliance/Published"
+    sync_frequency: daily
+    docs:
+      - {doc_id: BL-PUB-004, upstream_file_id: "1AbC...xyz", last_synced_at: "2026-09-14T03:00:00Z"}
+
+  - source_id: readme-devportal
+    system: readme_io
+    project: brightline-api
+    sync_frequency: on_publish
+    docs:
+      - {doc_id: BL-PUB-006, upstream_doc_slug: "api-overview", last_synced_at: "2026-09-13T18:22:00Z"}
+
+  - source_id: confluence-support-ops
+    system: confluence
+    space: SUPOPS
+    sync_frequency: hourly
+    docs:
+      - {doc_id: BL-INT-001, upstream_page_id: "SUPOPS-4410", last_synced_at: "2026-09-14T06:00:00Z"}
+      - {doc_id: BL-INT-001-OLD, upstream_page_id: "SUPOPS-3390", last_synced_at: "2026-09-14T06:00:00Z", note: "archived space, kept for history"}
+      - {doc_id: BL-INT-005, upstream_page_id: "SUPOPS-4520", last_synced_at: "2026-09-14T06:00:00Z"}
+
+  - source_id: confluence-engineering
+    system: confluence
+    space: ENG
+    sync_frequency: hourly
+    docs:
+      - {doc_id: BL-INT-002, upstream_page_id: "ENG-7710", last_synced_at: "2026-09-14T05:00:00Z"}
+      - {doc_id: BL-INT-002-ADD, upstream_page_id: "ENG-7801", last_synced_at: "2026-09-14T05:00:00Z"}
+      - {doc_id: BL-INT-007, upstream_page_id: "ENG-7650", last_synced_at: "2026-09-14T05:00:00Z"}
+
+  - source_id: notion-sales-ops
+    system: notion
+    database: "Sales Playbooks"
+    sync_frequency: daily
+    docs:
+      - {doc_id: BL-INT-003, upstream_page_id: "notion://sales-ops/discount-authority", last_synced_at: "2026-09-14T02:00:00Z"}
+
+  - source_id: notion-product
+    system: notion
+    database: "Roadmap (internal)"
+    sync_frequency: daily
+    docs:
+      - {doc_id: BL-INT-004, upstream_page_id: "notion://product/roadmap-q4-2026", last_synced_at: "2026-09-14T02:00:00Z"}
+
+  - source_id: notion-people-ops
+    system: notion
+    database: "People Ops Handbook"
+    sync_frequency: weekly
+    docs:
+      - {doc_id: BL-INT-006, upstream_page_id: "notion://people-ops/onboarding-checklist", last_synced_at: "2026-09-08T09:00:00Z"}
+
+# working-context/* is intentionally NOT listed here: it represents live Slack/email
+# traffic pulled in as unstructured evidence (if at all), not governed, versioned docs.

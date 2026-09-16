@@ -1,0 +1,274 @@
+{
+  "format": 1,
+  "build_id": "sha256:cf82e9fa32c46287afa15a05a6458e9566debc53e4970081baf1d3f65464d0c6",
+  "ksor_version": "0.0.60",
+  "okf": {
+    "version": "0.2",
+    "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
+    "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
+  },
+  "source_commit": null,
+  "dirty": true,
+  "as_of": "2026-09-14T18:18:14.539Z",
+  "drafts": "hidden",
+  "instance_sha256": "37031afcefdb5d659de4142dcdf208551819f9ee0f58ff7023f015d0c330030d",
+  "policy_sha256": "d8e0ff4619456cb84f7e1187f6086492e26b41ef1b088ab760f79768b2f6344a",
+  "people_sha256": "6dd7a2524197e380156f3f5f15cf581ef62440bff7bfda984206997d5b0df1e9",
+  "ledger_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "ledger_entries": [],
+  "audiences": {
+    "registry": [
+      "internal"
+    ],
+    "viewers": {
+      "public": [
+        "public"
+      ],
+      "internal": [
+        "public",
+        "internal"
+      ]
+    }
+  },
+  "documents": [
+    {
+      "path": "finance/expense-policy.md",
+      "sha256": "be59dee64c84daa758f0960e34d5cb68a7f6ca19319185c244168400dd565a45",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "internal",
+        "public"
+      ]
+    },
+    {
+      "path": "finance/late-expense-claims.md",
+      "sha256": "70dce4227a25c056d89003c1c69cd15db7de433c5e4466eee5e6b6f61db24bc3",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "internal",
+        "public"
+      ]
+    },
+    {
+      "path": "internal-sor/billing-dispute-process.md",
+      "sha256": "5fd5d867014cbe425d25f40103a2eb8dcf314e6a004d7bef1b46ec6138d2234e",
+      "status": "stable",
+      "audience": [
+        "internal"
+      ],
+      "admitted": [
+        "internal"
+      ]
+    },
+    {
+      "path": "internal-sor/data-retention-internal.md",
+      "sha256": "b364505b4a43d35f6b1995966e4abdf13b2fc23640cadd6348c7576bec3051a7",
+      "status": "stable",
+      "audience": [
+        "internal"
+      ],
+      "admitted": [
+        "internal"
+      ]
+    },
+    {
+      "path": "internal-sor/employee-discount-authority.md",
+      "sha256": "eb04ba1ccb3f71f1ada8146edc653ed834abf83811f3e23234f7a94486625af5",
+      "status": "stable",
+      "audience": [
+        "internal"
+      ],
+      "admitted": [
+        "internal"
+      ]
+    },
+    {
+      "path": "internal-sor/employee-onboarding-checklist.md",
+      "sha256": "e1e7728544b0f6ad8e4710faa31e0e6454c408cdee9a34ea10702d20d6cd4816",
+      "status": "stable",
+      "audience": [
+        "internal"
+      ],
+      "admitted": [
+        "internal"
+      ]
+    },
+    {
+      "path": "internal-sor/incident-response-runbook.md",
+      "sha256": "8408db5ee5c83184ba16c2a46d4d77433523944a04e311d52b555bf020bbe599",
+      "status": "stable",
+      "audience": [
+        "internal"
+      ],
+      "admitted": [
+        "internal"
+      ]
+    },
+    {
+      "path": "internal-sor/internal-roadmap-notes.md",
+      "sha256": "d9c2b2a665548883e8880b6604d8502481431d9e227a776be896c2fcb1aa0fe0",
+      "status": "stable",
+      "audience": [
+        "internal"
+      ],
+      "admitted": [
+        "internal"
+      ]
+    },
+    {
+      "path": "internal-sor/old-refund-policy.md",
+      "sha256": "1a1870991b1ff58e38c76c49c9467cd7e7e3c6efb094df6675fe11ccc3022043",
+      "status": "stable",
+      "audience": [
+        "internal"
+      ],
+      "admitted": [
+        "internal"
+      ]
+    },
+    {
+      "path": "internal-sor/refund-approval-policy.md",
+      "sha256": "3c75d2a82cbd8625fe9528cabe528ae65b94b1d61ba02c45fb1889b21996f9ca",
+      "status": "stable",
+      "audience": [
+        "internal"
+      ],
+      "admitted": [
+        "internal"
+      ]
+    },
+    {
+      "path": "internal-sor/security-incident-escalation-addendum.md",
+      "sha256": "fd0a09cba080349dc3905966765d60273c757dd34fa8e48d3291161c836e92aa",
+      "status": "stable",
+      "audience": [
+        "internal"
+      ],
+      "admitted": [
+        "internal"
+      ]
+    },
+    {
+      "path": "public-sor/api-overview.md",
+      "sha256": "c62f46d7b68a5ed9d99e772e9a5bb7f0056a21cfc23dae6ef27f9a71a404bd4c",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "internal",
+        "public"
+      ]
+    },
+    {
+      "path": "public-sor/data-privacy-policy.md",
+      "sha256": "40b1aee78f506e098ef80b27cfa889150ca5941a8e446a19faeb1d8131354e64",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "internal",
+        "public"
+      ]
+    },
+    {
+      "path": "public-sor/pricing-policy.md",
+      "sha256": "a64063ef9da76804cf2b874d9a6dca8da4034f9a8d72ba4cf0498c0b9d9a2ebf",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "internal",
+        "public"
+      ]
+    },
+    {
+      "path": "public-sor/product-overview.md",
+      "sha256": "292b5c31689b4e5f4c8a69d609aa930eb5db225afb531644430cfaf9ab2718f1",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "internal",
+        "public"
+      ]
+    },
+    {
+      "path": "public-sor/security-overview.md",
+      "sha256": "7841ac64567e2c2f1bb6ce1f5559403ab770ce7dccef2099d87956bf823ad615",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "internal",
+        "public"
+      ]
+    },
+    {
+      "path": "public-sor/support-sla.md",
+      "sha256": "e45f69cfa0809f3b71c35bcf696cbf746373ef31abedb8c9c1b0cdebc5948a88",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "internal",
+        "public"
+      ]
+    },
+    {
+      "path": "refund-policy.md",
+      "sha256": "597d02be53f090d4a5eece512841386bc9940a12de1ddf3646420169359c074c",
+      "status": "stable",
+      "audience": [
+        "public"
+      ],
+      "admitted": [
+        "internal",
+        "public"
+      ]
+    }
+  ],
+  "companions": [],
+  "assets": [],
+  "indexes": [
+    {
+      "path": "finance/index.md",
+      "sha256": "03bb9136eb269cf339dcab9881016f9dda189bf841b5a060967325d5e31b86df"
+    },
+    {
+      "path": "index.md",
+      "sha256": "29d9c307c146aaeb40145d86555be99e89333be8eb70d817f1d220bcb4e83dc8"
+    },
+    {
+      "path": "internal-sor/index.md",
+      "sha256": "9f460cb92615edc0bfc508696d928dc7657937385d05ed3face032e9680a9f85"
+    },
+    {
+      "path": "public-sor/index.md",
+      "sha256": "29c329cd871272de7afbe146e5d1a2d80d428f0f338e4b31ccdafabfdb8ec598"
+    }
+  ],
+  "bundles": [
+    {
+      "viewer": "public",
+      "sha256": "defe2a37bbd45fe391b4315685c5c5a491a3e22af35c5d18bd0866acd4e517ea",
+      "files": 12
+    },
+    {
+      "viewer": "internal",
+      "sha256": "b86794091f756ab897ae90ecce7a09356c137244038e054e0153dd36705c3fae",
+      "files": 22
+    }
+  ]
+}
