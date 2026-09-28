@@ -4,11 +4,11 @@ title: "Brightline AI Agent Connection (MCP)"
 description: "A digital brain for your AI assistants. Connect to Brightline's Knowledge System of Record via the Model Context Protocol (MCP) to interact with our latest verified information."
 order: 4
 status: stable
-generated: { by: "human:mshariq", at: "2026-09-28T15:32:00Z" }
+generated: { by: "human:mshariq", at: "2026-09-28T15:38:00Z" }
 ksor:
   audience: [public]
   owner: human:mshariq
-  approval: { by: "human:mshariq", at: "2026-09-28T15:32:00Z" }
+  approval: { by: "human:mshariq", at: "2026-09-28T15:38:00Z" }
 ---
 
 [← Back to Home](/)
@@ -56,13 +56,13 @@ Most AI assistants answer the question in front of them. Brightline AI also unde
 
 Brightline AI has two complementary roles.
 
-For the enterprise client
+**For the enterprise client**
 
 A personal integration agent
 
 It knows your deployment context and guides your individual progress through the Brightline product suite.
 
-For Brightline Software
+**For Brightline Software**
 
 The reference expert twin
 
@@ -72,11 +72,11 @@ Brightline AI is a **digital twin** of our Chief Architect: our design identity,
 
 Behind the agent are two governed records working together:
 
-Knowledge Record
+**Knowledge Record**
 
 The Brightline System of Record holds the governed concepts, pricing, API methods, terminology, and technical material.
 
-Client Record
+**Client Record**
 
 Your deployment goal, what you build, and how your stack operates, plus the modules you completed, the architecture you designed, and your next integration step.
 
@@ -94,64 +94,51 @@ The first generation of enterprise AI tools gave users access to generic answers
 
 Brightline AI is our implementation of that future.
 
-ConnectorLive
+<div className="flex gap-2 my-4">
+  <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Connector</span>
+  <span className="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded">Live</span>
+</div>
 
 ### Set up Brightline AI
 
 You add one thing in [claude.ai](https://claude.ai/new?modal=add-custom-connector#settings/customize-connectors), once. The **connector** brings the system of record, our methodology, and your progress. After that, you just ask a question. About one minute in all.
 
-Beta 1Expect rough edges while it is in beta. If something breaks, verify critical facts with our support team.
+**Beta 1**  
+Expect rough edges while it is in beta. If something breaks, verify critical facts with our support team.
 
-Add the connector→Start integrating
-
-Step 1 of 2
+<Steps>
 
 #### Add the connector
 
-1
+1. Open **Connectors** in your [claude.ai](https://claude.ai/new?modal=add-custom-connector#settings/customize-connectors) sidebar under Customize.
 
-Open **Connectors** in your [claude.ai](https://claude.ai/new?modal=add-custom-connector#settings/customize-connectors) sidebar under Customize.
+2. Click **Add custom connector**.
 
-2
+3. Paste the **Name** and the **MCP Server URL** below. 
+   - **Name**: `Brightline AI`
+   - **MCP Server URL**: `https://brightline-ksor-site.vercel.app/mcp`
 
-Click **Add custom connector**.
+4. Open **Advanced settings**. Paste the **OAuth Client ID** there.
+   - **OAuth Client ID**: `brightline-ksor`
+   - ! **Leave Client Secret empty.** This connector does not have one. Type something there and it will not connect.
 
-3
+5. Click **Add** to save the connector.
 
-Paste the **Name** (`Brightline AI`) and the **MCP Server URL** (`https://brightline-ksor-site.vercel.app/mcp`) below.
+   ![The Add custom connector dialog in Claude with the Brightline AI name, MCP server URL, and OAuth Client ID filled in, ready for the Add button to be clicked.](/claude_connect_dialog.svg)
 
-4
+6. Find it in your list, click **Connect**, sign in with your Brightline account, and approve. This is what gives you your own client record.
 
-Open **Advanced settings**. Paste the **OAuth Client ID** (`brightline-ksor`) there.
+7. On the same page, set **Tool permissions** to **Always allow** for **both** groups. Skip this and Claude stops to ask your permission on almost every reply.
 
-!**Leave Client Secret empty.** This connector does not have one. Type something there and it will not connect.
-
-5
-
-Click **Add** to save the connector.
-
-claude.ai/settings/customize-connectors![The Add custom connector dialog in Claude with the Brightline AI name, MCP server URL, and OAuth Client ID filled in, ready for the Add button to be clicked.](/claude_connect_dialog.svg)
-
-6
-
-Find it in your list, click **Connect**, sign in with your Brightline account, and approve. This is what gives you your own client record.
-
-7
-
-On the same page, set **Tool permissions** to **Always allow** for **both** groups. Skip this and Claude stops to ask your permission on almost every reply.
-
-claude.ai/settings/customize-connectors![The Brightline AI Tool permissions panel in Claude, with the permissions menu open and Always allow highlighted.](/claude_permissions_dialog.svg)
-
-Step 2 of 2
+   ![The Brightline AI Tool permissions panel in Claude, with the permissions menu open and Always allow highlighted.](/claude_permissions_dialog.svg)
 
 #### Start integrating
 
-1
+1. Open a new chat in claude.ai and pick **Opus 5** or **Sonnet 5** in the model picker under the chat box. Brightline AI has to check the system of record and your client record on every reply, and these two do that reliably. Smaller models skip the checks and start improvising.
 
-Open a new chat in claude.ai and pick **Opus 5** or **Sonnet 5** in the model picker under the chat box. Brightline AI has to check the system of record and your client record on every reply, and these two do that reliably. Smaller models skip the checks and start improvising.
+2. Type this:
+   `/brightline`
+   
+   Brightline AI says hello by name and picks up where you stopped. He only comes when you call him, so your other chats stay normal.
 
-2
-
-Type this:
-
-Brightline AI says hello by name and picks up where you stopped. He only comes when you call him, so your other chats stay normal.
+</Steps>
