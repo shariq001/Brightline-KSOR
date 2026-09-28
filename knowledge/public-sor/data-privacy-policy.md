@@ -1,44 +1,50 @@
 ---
 type: Concept
 title: "Brightline Data Privacy Policy"
-description: "Brightline Data Privacy Policy"
+description: "A plain-English guide on how Brightline handles your data across SaaS, AI Agents, and RAG pipelines."
 status: stable
-generated: { by: "human:mshariq", at: "2026-09-14T17:00:00Z" }
+generated: { by: "human:mshariq", at: "2026-09-28T13:20:00Z" }
 ksor:
-  audience:
-    - public
+  audience: [public]
   owner: human:mshariq
-  approval: { by: "human:mshariq", at: "2026-09-14T17:00:00Z" }
-sources:
-  - id: fixture-data-privacy-policy
-    title: Fixture data-privacy-policy.md
-    resource: "src/brightline-ksor-fixtures/fixtures/public-sor/data-privacy-policy.md"
+  approval: { by: "human:mshariq", at: "2026-09-28T13:20:00Z" }
 ---
 
-This policy describes what data Brightline Software Inc collects from customers and how it is handled.
+# Brightline Data Privacy Policy
 
-## What We Collect
+Trust is the foundation of everything we build. This policy explains, in plain English, exactly what data Brightline Software Inc. collects from you and how we protect it across our SaaS platforms, AI Agents, and Custom Web Development services.
 
-- **Account data**: name, email, company, billing information.
-- **Usage data**: feature interactions, login timestamps, device/browser metadata, collected to improve product performance and reliability.
-- **Content data**: tasks, comments, files, and other content customers create within Brightline, owned by the customer.
+---
 
-## How Data Is Handled
+## 1. What Information Do We Collect?
 
-- All data is encrypted in transit (TLS 1.2+) and at rest (AES-256).
-- Access to customer content is restricted to authorized personnel on a need-to-know basis.
-- We do not sell customer data to third parties.
-- Subprocessors used for hosting, email delivery, and analytics are listed in our subprocessor directory, available on request.
+To provide you with great service, we need to collect a few basic types of information:
 
-## Data Retention
+- **Account Data**: The basics needed to create your account—your name, email address, company name, and billing details.
+- **Usage Data**: We look at how you interact with our platform (like login times and which features you click the most). This helps us find bugs and make the product faster and easier to use.
+- **Customer Content**: The files, databases, and proprietary text you upload into our system. **You retain 100% full ownership of all your Customer Content.** We do not own it, and we do not sell it.
 
-- Active account data is retained for the life of the account.
-- Upon account closure, customer content is retained for 90 days (to allow recovery) and then permanently deleted, except where retention is required by law.
+---
 
-## Compliance
+## 2. AI and Your Data (How We Keep You Safe)
 
-Brightline is designed to support compliance with GDPR and CCPA, including data subject access requests, data portability, and the right to deletion. Customers can submit privacy requests through our support channel.
+Because we provide advanced AI Agents and Retrieval-Augmented Generation (RAG) pipelines, we know you might be worried about how AI uses your private data. **We have strict rules in place to protect you.**
 
-## Contact
+- **Zero Training Policy**: We absolutely **never** use your files, your databases, or your chat logs to train foundational AI models. Your data will never accidentally show up in someone else's AI answer.
+- **Strict Data Isolation**: When you upload documents to our RAG vector databases, they are locked in a "silo." This means your AI agents can only read *your* company's files, and nobody else's. Cross-talk between different customers is technologically blocked.
+- **Safe AI Providers**: When our AI agents need to process a complex question, we use third-party tools (like OpenAI or Google Gemini). We only use secure, Enterprise-grade APIs that have legally binding agreements forbidding them from keeping or learning from your data.
 
-Privacy questions can be directed to our support team, who will route requests to the Legal & Compliance team as needed.
+---
+
+## 3. Data Retention and Deletion
+
+We believe you should have total control over your digital footprint.
+- **Backups**: While your account is active, we back up your data daily to prevent accidental loss.
+- **When You Leave**: If you cancel your subscription, we give you 30 days to export and download your data. After 30 days, we permanently delete it from our servers and databases. 
+- **Right to Delete**: You can email us at `privacy@brightline.com` at any time to request immediate deletion of all your data. 
+
+---
+
+## 4. Industry Compliance
+
+Our infrastructure is built to meet the highest industry standards. We comply with **SOC 2 Type II** security standards and our systems are designed to fully support your GDPR (Europe) and CCPA (California) privacy requirements.

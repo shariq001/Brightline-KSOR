@@ -99,18 +99,12 @@ export function HomeCover({
             <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center gap-4 sm:gap-6 w-full sm:w-auto">
               <Link
                 href={firstUrl}
-                className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-3 sm:gap-4 rounded-full bg-gradient-to-b from-amber-500 to-amber-600 dark:from-blue-600 dark:to-blue-800 text-white px-8 py-4 sm:px-10 sm:py-5 text-xs sm:text-sm font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase transition-all duration-500 shadow-[0_0_30px_rgba(245,158,11,0.3)] dark:shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:shadow-[0_0_50px_rgba(245,158,11,0.6)] dark:hover:shadow-[0_0_60px_rgba(59,130,246,0.6)] hover:-translate-y-1 overflow-hidden border border-white/20"
+                className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-3 sm:gap-4 rounded-full bg-slate-900 hover:bg-slate-800 dark:bg-white dark:hover:bg-gray-100 text-white dark:text-slate-900 px-8 py-4 sm:px-10 sm:py-5 text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 cursor-pointer"
               >
-                {/* Glowing sweep effect */}
-                <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/40 to-transparent group-hover:animate-[shimmer_1.5s_infinite]" />
-                
                 <span className="relative z-10 flex items-center gap-2 sm:gap-3">
-                  INITIATE ACCESS
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                  Initiate Access
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
                 </span>
-                
-                {/* Inner glass highlight */}
-                <div className="absolute inset-0 rounded-full border-t border-white/40 pointer-events-none" />
               </Link>
             </div>
           </div>

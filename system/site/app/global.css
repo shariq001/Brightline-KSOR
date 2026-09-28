@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&display=swap');
+
 /* shadcn/ui is the component system (`components.json`, `npx shadcn@latest
    add <name>`), and Fumadocs reads its colours: the `shadcn` preset maps every
    `--color-fd-*` token onto the shadcn variable of the same role, so one
@@ -1055,3 +1055,10 @@ html > body[data-scroll-locked] {
 
 .fancy-font { font-family: 'Cinzel', serif; }
 
+
+/* Fixes requested by user */
+header nav { padding-left: 1.5rem !important; padding-right: 1.5rem !important; margin: 0 !important; }
+button, [role="button"], .fd-button, .theme-toggle { cursor: pointer !important; }
+input[type="search"], .search-input, [role="searchbox"] { cursor: text !important; }
+
+.fancy-font { font-family: 'Cinzel', serif; }

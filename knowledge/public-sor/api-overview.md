@@ -1,52 +1,36 @@
 ---
 type: Concept
-title: "Brightline API Overview"
-description: "Brightline API Overview"
+title: "Brightline API & Developer Overview"
+description: "Integration details for Brightline SaaS, AI Agents, and RAG architectures."
 status: stable
-generated: { by: "human:mshariq", at: "2026-09-14T17:00:00Z" }
+generated: { by: "human:mshariq", at: "2026-09-28T13:00:00Z" }
 ksor:
   audience:
     - public
   owner: human:mshariq
-  approval: { by: "human:mshariq", at: "2026-09-14T17:00:00Z" }
-sources:
-  - id: fixture-api-overview
-    title: Fixture api-overview.md
-    resource: "src/brightline-ksor-fixtures/fixtures/public-sor/api-overview.md"
+  approval: { by: "human:mshariq", at: "2026-09-28T13:00:00Z" }
 ---
 
-Brightline provides a REST API for programmatic access to projects, tasks,
-and users.
+# Brightline API & Developer Overview
 
-## Authentication
+Brightline offers powerful developer tools to integrate our SaaS platforms, trigger autonomous AI Agents, and interact with your custom RAG pipelines.
 
-- API keys (per-workspace) for server-to-server integrations.
-- OAuth 2.0 for apps acting on behalf of a Brightline user.
+## 1. REST API
+Our unified REST API allows you to programmatically manage your digital products.
+- **Base URL**: `https://api.brightline.com/v1/`
+- **Authentication**: Bearer token via standard `Authorization` headers. We support Workspace API keys and OAuth 2.0 flows.
+- **Endpoints**: Cover user management, billing provisioning, and custom dashboard analytics.
 
-## Rate Limits
+## 2. AaaS (Agentic) Triggers & Webhooks
+Integrate Brightline's autonomous agents directly into your CI/CD pipelines or internal tools.
+- **Agent Triggers**: Send a `POST /v1/agents/invoke` request to dispatch a background agent for a specific task (e.g., data research, code review).
+- **Webhooks**: Register webhooks to receive real-time JSON payloads when an agent completes a workflow, encounters a blocker, or requires human-in-the-loop approval.
 
-| Plan       | Requests per minute |
-|------------|----------------------|
-| Team       | 120                  |
-| Business   | 600                  |
-| Enterprise | Custom, contact sales |
+## 3. RAG Pipeline Integrations
+For clients utilizing our Retrieval-Augmented Generation services, we expose direct interfaces to your siloed vector stores.
+- **Ingest API**: Stream documents directly into your vector database.
+- **Semantic Search API**: Query your RAG database programmatically to receive grounded, cited answers inside your own applications.
 
-Rate limits apply per workspace. Exceeding the limit returns an HTTP 429 with
-a `Retry-After` header.
-
-## Core Resources
-
-- `/projects` — create, list, update, archive projects
-- `/tasks` — create, list, update tasks; supports filtering by project, assignee, status
-- `/users` — list workspace members
-- `/webhooks` — subscribe to task and project events
-
-## Pagination
-
-List endpoints are cursor-paginated via a `next_cursor` field in the response
-body; pass it as a `cursor` query parameter to fetch the next page.
-
-## Support
-
-API support is available through the same channels described in
-`support-sla.md`, at the response times listed there.
+<Callout type="info" title="Developer Portal">
+For complete OpenAPI specifications, SDKs (Node.js, Python), and rate limit details, visit the Brightline Developer Portal at `developer.brightline.com`.
+</Callout>

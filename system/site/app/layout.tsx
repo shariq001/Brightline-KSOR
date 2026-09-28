@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { RootProvider } from "fumadocs-ui/provider/next";
 import "./global.css";
 import type { Metadata } from "next";
@@ -6,6 +7,7 @@ import { basePath, badgeByUrl } from "@/lib/source";
 import { readStageManifest } from "@/lib/stage-manifest";
 import KsorSearchDialog from "@/components/search-dialog";
 import ChatWidget from "@/components/chat-widget";
+import { ScrollProgress } from "@/components/scroll-progress";
 
 // No next/font/google: it fetches the face from Google at BUILD time, so a
 // scaffolded project could not build offline and two builds of one commit
@@ -28,7 +30,13 @@ export const metadata: Metadata = {
 export default function Layout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet" />
+      </head>
       <body className="flex flex-col min-h-screen">
+        <ScrollProgress />
         {/* Which documents carry a badge, for the search dialog — it
             runs in the browser over a static index that has no field for it.
             Delivered in the document rather than as a dialog prop because
@@ -36,7 +44,7 @@ export default function Layout({ children }: LayoutProps<"/">) {
             casting that away would hide a real break the day those props move.
             `<` is escaped: a title or route is authored content, and closing
             this tag early would be script injection from the record. */}
-        <script
+        <Script
           type="application/json"
           id="ksor-statuses"
           dangerouslySetInnerHTML={{

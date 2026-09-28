@@ -3,6 +3,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Send, Sparkles, Bot, User } from "lucide-react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -79,6 +81,7 @@ export default function ChatWidget() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ type: "spring", stiffness: 300, damping: 25 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setIsOpen(true)}
@@ -93,6 +96,7 @@ export default function ChatWidget() {
           <motion.div
             key="chat-window"
             layoutId="chat-widget-container"
+            transition={{ type: "spring", stiffness: 300, damping: 25 }}
             className="fixed bottom-4 left-4 sm:bottom-6 sm:left-auto sm:right-6 w-[calc(100vw-2rem)] sm:w-[400px] h-[85vh] sm:h-[650px] max-h-[85vh] bg-zinc-950 backdrop-blur-2xl border border-white/20 rounded-3xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.7)] flex flex-col z-50 overflow-hidden ring-1 ring-white/10"
           >
             {/* Header */}
@@ -151,8 +155,10 @@ export default function ChatWidget() {
                         : "bg-zinc-800 text-white border border-white/20 rounded-tl-sm backdrop-blur-md"
                     }`}
                   >
-                    <div className="text-[13.5px] leading-relaxed text-white whitespace-pre-wrap">
-                      {m.content}
+                    <div className="text-[13.5px] leading-relaxed text-white whitespace-pre-wrap [&>p]:mb-2 [&>p:last-child]:mb-0 [&>ul]:list-disc [&>ul]:ml-4 [&>ol]:list-decimal [&>ol]:ml-4 [&_a]:underline [&_a]:text-blue-300 [&_strong]:font-bold [&_code]:bg-white/10 [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded-md [&_pre]:bg-black/50 [&_pre]:p-2 [&_pre]:rounded-md [&_pre>code]:bg-transparent [&_pre>code]:p-0">
+                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                        {m.content}
+                      </ReactMarkdown>
                     </div>
                   </div>
                 </motion.div>

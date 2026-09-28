@@ -1,8 +1,11 @@
 ---
 format: 2
-name: handbook
+name: brightline-ksor
 title: Brightline Software Knowledge Base
 description: Brightline Software's governed source of product, pricing, and support knowledge.
+site:
+  url: https://brightline-ksor.vercel.app
+mcp_url: https://brightline-ksor.vercel.app/mcp
 toolchain:
   requires: ">=0.0.60"
   scaffolded: "0.0.60"
