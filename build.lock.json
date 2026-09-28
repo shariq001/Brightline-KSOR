@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "build_id": "sha256:bde0e099265e55e5c469a0db3df3a8935285917055321c858a2006d35431046f",
+  "build_id": "sha256:45a72d49c1bbe5df6932bc82b6811192507c9dd2b7ef1a32f7cf1b708d1c7779",
   "ksor_version": "0.0.60",
   "okf": {
     "version": "0.2",
@@ -8,8 +8,8 @@
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
   "source_commit": "fc085de83ff5948f6c00d2a4eaf6c4c872c9465c",
-  "dirty": false,
-  "as_of": "2026-09-28T09:45:51.278Z",
+  "dirty": true,
+  "as_of": "2026-09-28T09:48:56.007Z",
   "drafts": "hidden",
   "instance_sha256": "0206c747cbc49ca027e445f4411a4183d1665190cc4cc6382727940962a6099b",
   "policy_sha256": "d8e0ff4619456cb84f7e1187f6086492e26b41ef1b088ab760f79768b2f6344a",
@@ -57,7 +57,7 @@
     },
     {
       "path": "public-sor/getting-started.md",
-      "sha256": "29e6e789ef449ac8e7f2c133496c6e62fa9de8769fd6bddd89f27cf3109c4a04",
+      "sha256": "bbcf602a25a1ce15f2fe88ebb32c2905e798ad2c2ebf3d2de5b555ecb67f022c",
       "status": "stable",
       "audience": [
         "public"
@@ -180,12 +180,12 @@
   "bundles": [
     {
       "viewer": "public",
-      "sha256": "f7ebeb0df000bafb3861b4141404ee111d2037fa93cde5743f8c1876c407b4f4",
+      "sha256": "9cdc2635c682f37c04293902fa4c610ba4afb5a990d820a38121658acec8517e",
       "files": 14
     },
     {
       "viewer": "internal",
-      "sha256": "f7ebeb0df000bafb3861b4141404ee111d2037fa93cde5743f8c1876c407b4f4",
+      "sha256": "9cdc2635c682f37c04293902fa4c610ba4afb5a990d820a38121658acec8517e",
       "files": 14
     }
   ]
