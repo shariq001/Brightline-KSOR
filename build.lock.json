@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:b85cceb664ad4d729081e88c923508ec188c89258d8676af11cd4825950d302d",
+  "build_id": "sha256:e455dc2b5e380874f98e175020f21633db9c3e91c9164b1605d4c884b551de86",
   "ksor_version": "0.0.60",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "4dd1a8f9282cc4cd2a055fc1a486acba45d8ff69",
+  "source_commit": "d02ea1590d59eb5f0e6b2dfd8d2687dbd6f59699",
   "dirty": true,
-  "as_of": "2026-09-28T10:25:39.755Z",
+  "as_of": "2026-09-28T10:32:07.013Z",
   "drafts": "hidden",
   "instance_sha256": "a6eb6aba09a17a3b31192d8808021ced3aea72ddfdf870f3479e3c33d6ac3c0a",
   "policy_sha256": "d8e0ff4619456cb84f7e1187f6086492e26b41ef1b088ab760f79768b2f6344a",
@@ -69,7 +69,7 @@
     },
     {
       "path": "public-sor/mcp-setup.md",
-      "sha256": "04e347c042b2581620a10d9aaef19d20dad7b79849ca435914da7ca875d1e9c2",
+      "sha256": "da75a37fa3e99811e88ccb9fa14479043d04632211c5fe277cc4d5734d554dd6",
       "status": "stable",
       "audience": [
         "public"
@@ -163,6 +163,14 @@
       "sha256": "123acf06a3bc850e87cec6cd6cc995d069a9b5e81906ade3d09fa2cf3b0c1d50"
     },
     {
+      "path": "claude_connect_dialog.svg",
+      "sha256": "8a18abc05c0476aed1a69ad13dc7c0a2284dc20a3c18fa01c3b40c7347b67c7f"
+    },
+    {
+      "path": "claude_permissions_dialog.svg",
+      "sha256": "a7e2ed7d1b50f76a3841817543f7e0bc303b5fa372786418862ea55b0fc06a39"
+    },
+    {
       "path": "minimal_agentic_ai.jpg",
       "sha256": "0642815267bfa3c108f9f45e528be15f0281d473fced20e198b3fdcd014d7611"
     }
@@ -180,13 +188,13 @@
   "bundles": [
     {
       "viewer": "public",
-      "sha256": "ab290f5f941b8cfc63b8fc98e22e4afe77edb7a7e53259841d3c06ef59d97456",
-      "files": 14
+      "sha256": "ef1dfabb4bb435f534eac82ba289ad539d889784984d4109d5aeaa970479863d",
+      "files": 16
     },
     {
       "viewer": "internal",
-      "sha256": "ab290f5f941b8cfc63b8fc98e22e4afe77edb7a7e53259841d3c06ef59d97456",
-      "files": 14
+      "sha256": "ef1dfabb4bb435f534eac82ba289ad539d889784984d4109d5aeaa970479863d",
+      "files": 16
     }
   ]
 }
