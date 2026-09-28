@@ -4,11 +4,11 @@ title: "Brightline AI Agent Connection (MCP)"
 description: "A digital brain for your AI assistants. Connect to Brightline's Knowledge System of Record via the Model Context Protocol (MCP) to interact with our latest verified information."
 order: 4
 status: stable
-generated: { by: "human:mshariq", at: "2026-09-28T15:38:00Z" }
+generated: { by: "human:mshariq", at: "2026-09-28T15:43:00Z" }
 ksor:
   audience: [public]
   owner: human:mshariq
-  approval: { by: "human:mshariq", at: "2026-09-28T15:38:00Z" }
+  approval: { by: "human:mshariq", at: "2026-09-28T15:43:00Z" }
 ---
 
 [← Back to Home](/)

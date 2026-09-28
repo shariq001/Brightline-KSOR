@@ -1,15 +1,15 @@
 {
   "format": 1,
-  "build_id": "sha256:95c4c15b263335efad60561e801ba7f5e7607c8d90aee1bf7278f53112db4756",
+  "build_id": "sha256:a5f5e4ee4916203edb15a76dd93b685d320352c5bc1e1c249f95403bbbe896b5",
   "ksor_version": "0.0.60",
   "okf": {
     "version": "0.2",
     "commit": "ad30107c31c06aec8a7d5636e0d1058118604e6f",
     "spec_sha256": "26aa5da029278939f914e578107242d9607d4f2dc5fe153272b82f9ed1030101"
   },
-  "source_commit": "791a7a12441739f197550f4f0eddc8fff7d3d884",
+  "source_commit": "4731764c4dee602ed208188f8d036ef2879e2429",
   "dirty": true,
-  "as_of": "2026-09-28T10:38:30.023Z",
+  "as_of": "2026-09-28T10:43:32.522Z",
   "drafts": "hidden",
   "instance_sha256": "a6eb6aba09a17a3b31192d8808021ced3aea72ddfdf870f3479e3c33d6ac3c0a",
   "policy_sha256": "d8e0ff4619456cb84f7e1187f6086492e26b41ef1b088ab760f79768b2f6344a",
@@ -69,7 +69,7 @@
     },
     {
       "path": "public-sor/mcp-setup.md",
-      "sha256": "b8b54ca20687683ce508dbfcc915116f608603165351a265279ddfc53f2f156a",
+      "sha256": "0e10b3827c469ad3bb9be09de86bae64aeb9889d083701d5d73b5898edd42ef5",
       "status": "stable",
       "audience": [
         "public"
@@ -188,12 +188,12 @@
   "bundles": [
     {
       "viewer": "public",
-      "sha256": "b5f5f9265c0be361374abedc70df753dc8f33fdb61aabce1f80b6b524c548414",
+      "sha256": "89b3b1c4874d6280d04ba99ff69430327db3ad2101c9dc3d0edc96727f482831",
       "files": 16
     },
     {
       "viewer": "internal",
-      "sha256": "b5f5f9265c0be361374abedc70df753dc8f33fdb61aabce1f80b6b524c548414",
+      "sha256": "89b3b1c4874d6280d04ba99ff69430327db3ad2101c9dc3d0edc96727f482831",
       "files": 16
     }
   ]
