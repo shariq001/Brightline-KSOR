@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#1e1e1e" rx="12" />
+  <rect x="50" y="50" width="500" height="300" fill="#2d2d2d" rx="8" stroke="#3d3d3d" stroke-width="1" />
+  <text x="80" y="90" font-family="sans-serif" font-size="18" font-weight="bold" fill="#ffffff">Add custom connector</text>
+  
+  <text x="80" y="140" font-family="sans-serif" font-size="14" fill="#a0a0a0">Name</text>
+  <rect x="80" y="150" width="440" height="36" fill="#1e1e1e" rx="4" stroke="#4d4d4d" stroke-width="1" />
+  <text x="90" y="173" font-family="sans-serif" font-size="14" fill="#ffffff">Brightline AI</text>
+  
+  <text x="80" y="220" font-family="sans-serif" font-size="14" fill="#a0a0a0">MCP Server URL</text>
+  <rect x="80" y="230" width="440" height="36" fill="#1e1e1e" rx="4" stroke="#4d4d4d" stroke-width="1" />
+  <text x="90" y="253" font-family="sans-serif" font-size="14" fill="#ffffff">https://brightline-ksor-site.vercel.app/mcp</text>
+  
+  <text x="80" y="300" font-family="sans-serif" font-size="14" fill="#a0a0a0">OAuth Client ID (Advanced settings)</text>
+  <rect x="80" y="310" width="440" height="36" fill="#1e1e1e" rx="4" stroke="#4d4d4d" stroke-width="1" />
+  <text x="90" y="333" font-family="sans-serif" font-size="14" fill="#ffffff">brightline-ksor</text>
+</svg>

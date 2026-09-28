@@ -4,12 +4,18 @@ title: "Brightline AI Agent Connection (MCP)"
 description: "A digital brain for your AI assistants. Connect to Brightline's Knowledge System of Record via the Model Context Protocol (MCP) to interact with our latest verified information."
 order: 4
 status: stable
-generated: { by: "human:mshariq", at: "2026-09-28T15:25:00Z" }
+generated: { by: "human:mshariq", at: "2026-09-28T15:32:00Z" }
 ksor:
   audience: [public]
   owner: human:mshariq
-  approval: { by: "human:mshariq", at: "2026-09-28T15:25:00Z" }
+  approval: { by: "human:mshariq", at: "2026-09-28T15:32:00Z" }
 ---
+
+[← Back to Home](/)
+
+![Brightline MCP Server](/minimal_agentic_ai.jpg)
+
+Beta 1
 
 # Brightline AI
 
@@ -17,12 +23,12 @@ A personal enterprise agent, built as a digital twin of Brightline's core method
 
 Brightline AI combines four things an ordinary AI chatbot does not have:
 
--   the governed knowledge of the Brightline Knowledge System of Record
+-   the governed knowledge of the [Brightline System of Record](/public-sor/product-overview)
 -   Brightline's enterprise standards, service level agreements, and deployment methodology
 -   your persistent integration record: what features you reviewed, what architecture you deployed, and what you should implement next
--   your specific enterprise goals and background. Every interaction is shaped around it, and it is yours to see and change any time.
+-   your profile: your specific enterprise goals and background. Every interaction is shaped around it, and it is yours to see and change any time.
 
-![Brightline MCP Server](/minimal_agentic_ai.jpg)
+![Brightline](/brightline_services.jpg)
 
 Brightline Software co-founded the Agentic Web and architected this Knowledge System of Record. Our agentic methodology is designed to deploy high-quality software, SaaS products, and RAG solutions for enterprises worldwide.
 
@@ -50,13 +56,13 @@ Most AI assistants answer the question in front of them. Brightline AI also unde
 
 Brightline AI has two complementary roles.
 
-**For the enterprise client**
+For the enterprise client
 
 A personal integration agent
 
 It knows your deployment context and guides your individual progress through the Brightline product suite.
 
-**For Brightline Software**
+For Brightline Software
 
 The reference expert twin
 
@@ -66,11 +72,11 @@ Brightline AI is a **digital twin** of our Chief Architect: our design identity,
 
 Behind the agent are two governed records working together:
 
-**Knowledge Record**
+Knowledge Record
 
 The Brightline System of Record holds the governed concepts, pricing, API methods, terminology, and technical material.
 
-**Client Record**
+Client Record
 
 Your deployment goal, what you build, and how your stack operates, plus the modules you completed, the architecture you designed, and your next integration step.
 
@@ -88,57 +94,64 @@ The first generation of enterprise AI tools gave users access to generic answers
 
 Brightline AI is our implementation of that future.
 
----
+ConnectorLive
 
 ### Set up Brightline AI
 
 You add one thing in [claude.ai](https://claude.ai/new?modal=add-custom-connector#settings/customize-connectors), once. The **connector** brings the system of record, our methodology, and your progress. After that, you just ask a question. About one minute in all.
 
-**Beta 1**
-Expect rough edges while it is in beta. If something breaks, verify critical facts with our support team.
+Beta 1Expect rough edges while it is in beta. If something breaks, verify critical facts with our support team.
 
-#### Step 1: Add the connector
+Add the connector→Start integrating
 
-1. Open **Connectors** in your [claude.ai](https://claude.ai/new?modal=add-custom-connector#settings/customize-connectors) sidebar under Customize.
-2. Click **Add custom connector**.
-3. Paste the **Name** and the **MCP Server URL** below. 
-   - **Name**: Brightline AI
-   - **MCP Server URL**: `https://brightline-ksor-site.vercel.app/mcp`
-4. Open **Advanced settings**. Paste the **OAuth Client ID** there.
-   - **OAuth Client ID**: `brightline-ksor` (Leave Client Secret empty).
-5. Click **Add** to save the connector.
-6. Find it in your list, click **Connect**, and approve. This gives you your own client record.
-7. On the same page, set **Tool permissions** to **Always allow** for **both** groups. Skip this and Claude stops to ask your permission on almost every reply.
+Step 1 of 2
 
-#### Step 2: Connect via Claude Desktop (Optional alternative)
+#### Add the connector
 
-If you prefer using the Claude Desktop application locally instead of the web, it takes exactly three steps to configure the Server-Sent Events (SSE) transport.
+1
 
-1. Open your Claude Desktop configuration file.
-   - **Mac**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-   - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-2. Add the Brightline server to your `mcpServers` object:
+Open **Connectors** in your [claude.ai](https://claude.ai/new?modal=add-custom-connector#settings/customize-connectors) sidebar under Customize.
 
-```json
-{
-  "mcpServers": {
-    "brightline-ksor": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@modelcontextprotocol/server-sse",
-        "--url",
-        "https://brightline-ksor-site.vercel.app/mcp"
-      ]
-    }
-  }
-}
-```
-3. **Restart Claude Desktop**. You will now see a small "plug" icon (🔌) confirming Brightline KSOR tools are available.
+2
 
-#### Step 3: Start building
+Click **Add custom connector**.
 
-1. Open a new chat in claude.ai and pick **Opus 5** or **Sonnet 5** in the model picker under the chat box. Brightline AI has to check the system of record and your client record on every reply, and these two do that reliably.
-2. Type this:
-   `/brightline`
-   Brightline AI will say hello by name and pick up where your integration stopped!
+3
+
+Paste the **Name** (`Brightline AI`) and the **MCP Server URL** (`https://brightline-ksor-site.vercel.app/mcp`) below.
+
+4
+
+Open **Advanced settings**. Paste the **OAuth Client ID** (`brightline-ksor`) there.
+
+!**Leave Client Secret empty.** This connector does not have one. Type something there and it will not connect.
+
+5
+
+Click **Add** to save the connector.
+
+claude.ai/settings/customize-connectors![The Add custom connector dialog in Claude with the Brightline AI name, MCP server URL, and OAuth Client ID filled in, ready for the Add button to be clicked.](/claude_connect_dialog.svg)
+
+6
+
+Find it in your list, click **Connect**, sign in with your Brightline account, and approve. This is what gives you your own client record.
+
+7
+
+On the same page, set **Tool permissions** to **Always allow** for **both** groups. Skip this and Claude stops to ask your permission on almost every reply.
+
+claude.ai/settings/customize-connectors![The Brightline AI Tool permissions panel in Claude, with the permissions menu open and Always allow highlighted.](/claude_permissions_dialog.svg)
+
+Step 2 of 2
+
+#### Start integrating
+
+1
+
+Open a new chat in claude.ai and pick **Opus 5** or **Sonnet 5** in the model picker under the chat box. Brightline AI has to check the system of record and your client record on every reply, and these two do that reliably. Smaller models skip the checks and start improvising.
+
+2
+
+Type this:
+
+Brightline AI says hello by name and picks up where you stopped. He only comes when you call him, so your other chats stay normal.
