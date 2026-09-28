@@ -1,44 +1,45 @@
 ---
 type: Concept
-title: "Brightline MCP Server Setup"
-description: "How to connect your autonomous AI agents to Brightline's Knowledge System of Record via the Model Context Protocol (MCP)."
+title: "Brightline AI Agent Connection (MCP)"
+description: "A digital brain for your AI assistants. Connect to Brightline's Knowledge System of Record via the Model Context Protocol (MCP) to interact with our latest verified information."
 order: 4
 status: stable
-generated: { by: "human:mshariq", at: "2026-09-28T14:15:00Z" }
+generated: { by: "human:mshariq", at: "2026-09-28T14:58:00Z" }
 ksor:
   audience: [public]
   owner: human:mshariq
-  approval: { by: "human:mshariq", at: "2026-09-28T14:15:00Z" }
+  approval: { by: "human:mshariq", at: "2026-09-28T14:58:00Z" }
 ---
 
-# Brightline MCP Server Setup
+# Brightline AI Agent Connection (MCP)
 
-![MCP Connection](/brightline_services.jpg)
+![Brightline MCP Server](/minimal_agentic_ai.jpg)
 
-The **Model Context Protocol (MCP)** is an open standard that allows AI agents to securely connect to external knowledge bases. By connecting your agent to the Brightline KSOR MCP Server, your agent instantly gains access to all of our verified product information, pricing tiers, SLAs, and technical specifications.
+**The Brightline AI Agent Connection** is your autonomous assistant's direct gateway to our Knowledge System of Record. Instead of relying on outdated training data, your agent connects to our live brain. It lives inside the AI agent you already use, including Claude Desktop, pulling verified pricing, SLAs, and technical specifications exactly when you need them.
 
----
+## 1. The MCP Endpoint
 
-## 1. The MCP Connection URL
+The Model Context Protocol (MCP) is the standard that wires your local agent into our live records. If you are using a standard MCP client, you will need our official MCP endpoint.
 
-If you are using a standard MCP client (like an agent harness, Claude Desktop, or custom script), you will need our official MCP endpoint.
-
-<Callout type="info" title="Official Endpoint">
-**`https://brightline-ksor.vercel.app/mcp`**
+<Callout type="info" title="Official Live Endpoint">
+**`https://brightline-ksor-site.vercel.app/mcp`**
 </Callout>
 
-*Note: If you are testing locally during development, the endpoint is `http://localhost:3000/mcp`.*
+*Note: This endpoint uses the Server-Sent Events (SSE) transport protocol.*
 
 ---
 
 ## 2. Connecting with Claude Desktop
 
-If you use Claude Desktop as your AI assistant, configuring it to read our documentation is simple. 
+If you use Claude Desktop as your AI assistant, configuring it to read our documentation is simple. It takes exactly three steps.
 
-1. Open your Claude Desktop configuration file.
-   - **Mac**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-   - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-2. Add the Brightline server to your `mcpServers` object using the standard Server-Sent Events (SSE) transport:
+### Step 1: Open Configuration
+Open your Claude Desktop configuration file.
+- **Mac**: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+
+### Step 2: Add the Brightline Server
+Add the Brightline server to your `mcpServers` object:
 
 ```json
 {
@@ -49,24 +50,29 @@ If you use Claude Desktop as your AI assistant, configuring it to read our docum
         "-y",
         "@modelcontextprotocol/server-sse",
         "--url",
-        "https://brightline-ksor.vercel.app/mcp"
+        "https://brightline-ksor-site.vercel.app/mcp"
       ]
     }
   }
 }
 ```
 
-3. **Restart Claude Desktop**. You will now see a small "plug" icon confirming Brightline KSOR tools are available.
+### Step 3: Restart
+**Restart Claude Desktop**. You will now see a small "plug" icon (🔌) confirming Brightline KSOR tools are available. You can now ask Claude questions like:
+- *"What is Brightline's SaaS pricing?"*
+- *"Show me the Brightline 14-day refund policy."*
 
 ---
 
-## 3. What Can Your Agent Do?
+## 3. The Toolset
 
 Once connected, your AI agent has three primary tools at its disposal:
 
-- `search`: Searches our vector database for specific concepts (e.g., "What is the SaaS pricing?").
-- `read`: Retrieves the full markdown text of a specific document if the search requires more context.
-- `outline`: Lists all available documents in the public Brightline ecosystem.
+| Tool | Purpose |
+| :--- | :--- |
+| **`search`** | Semantically searches our vector database for specific concepts. |
+| **`read`** | Retrieves the full markdown text of a specific document for deep context. |
+| **`outline`** | Lists all available documents in the public Brightline ecosystem. |
 
 <Callout type="warn" title="Fail-Closed Abstention">
 Our MCP server uses strict embedding distance thresholds. If your agent asks a question that our documentation does not answer, the server deliberately refuses to provide a document. This ensures your agent will safely abstain rather than hallucinate false policies.
