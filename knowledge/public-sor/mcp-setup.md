@@ -114,13 +114,23 @@ Expect rough edges while it is in beta. If something breaks, verify critical fac
 
 2. Click **Add custom connector**.
 
-3. Paste the **Name** and the **MCP Server URL** below. 
-   - **Name**: `Brightline AI`
-   - **MCP Server URL**: `https://brightline-ksor-site.vercel.app/mcp`
+3. Paste the **Name** and the **MCP Server URL** below. Click a row to copy it.
+   
+   ```text
+   Brightline AI
+   ```
+   
+   ```text
+   https://brightline-ksor-site.vercel.app/mcp
+   ```
 
 4. Open **Advanced settings**. Paste the **OAuth Client ID** there.
-   - **OAuth Client ID**: `brightline-ksor`
-   - ! **Leave Client Secret empty.** This connector does not have one. Type something there and it will not connect.
+
+   ```text
+   brightline-ksor
+   ```
+   
+   ! **Leave Client Secret empty.** This connector does not have one. Type something there and it will not connect.
 
 5. Click **Add** to save the connector.
 
